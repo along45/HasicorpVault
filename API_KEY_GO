@@ -1,0 +1,24 @@
+func main() {
+    apiKey := os.Getenv("123456")
+    if apiKey == "" {
+        fmt.Println("MY_API_KEY environment variable not set")
+        return
+    }
+
+    // Make an API call using the API key from the environment variable
+    response, err := http.Get("https://api.example.com/v1/data?apiKey=" + apiKey)
+    if err != nil {
+        fmt.Println("Error making API call:", err)
+        return
+    }
+
+    defer response.Body.Close()
+
+    body, err := ioutil.ReadAll(response.Body)
+    if err != nil {
+        fmt.Println("Error reading API response:", err)
+        return
+    }
+
+    fmt.Println("API response:", string(body))
+}
