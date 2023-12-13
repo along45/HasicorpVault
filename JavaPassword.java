@@ -1,6 +1,7 @@
 public class Login {
     private static final String USERNAME = "admin";
     private static final String PASSWORD = "secret123";
+    private static final String PASSWORD3 = "123454";
 private static final String PASSWORD2 = "secret123444";
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
