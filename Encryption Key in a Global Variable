@@ -1,0 +1,11 @@
+package main
+
+import (
+    "fmt"
+)
+
+var encryptionKey = "dGhpc2lzYXNlY3JldGtleQ=="
+
+func main() {
+    fmt.Println("Encryption Key:", encryptionKey)
+}
